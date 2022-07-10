@@ -8,7 +8,7 @@ import java.util.Random;
  * @date 2022/6/510:51 PM
  */
 // 在圆内随机产生点
-public class Generate_Random_Point_in_Circle {
+public class generate_random_point_in_circle {
 
     // 圆内等概率随机采样
     class Solution {

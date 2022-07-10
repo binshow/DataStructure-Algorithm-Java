@@ -8,7 +8,7 @@ import java.util.Queue;
  * @description: https://leetcode.cn/problems/find-bottom-left-tree-value/
  * @date 2022/6/2210:19 PM
  */
-public class Find_Bottom_Left_Tree_Value {
+public class find_bottom_left_tree_value {
 
     // 找树的最深最左子节点
     public int findBottomLeftValue(TreeNode root) {
