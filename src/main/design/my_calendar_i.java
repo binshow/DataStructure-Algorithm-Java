@@ -10,21 +10,23 @@ import java.util.List;
  */
 public class my_calendar_i {
 
-}
-
-class MyCalendar {
-    List<int[]> list;
-    public MyCalendar() {
-        list = new ArrayList<>();
-    }
-
-    public boolean book(int start, int end) {
-        end--; // 存储的都是左右闭区间了
-        for (int[] info : list){
-            if (start > info[1] || end < info[0]) continue;
-            else return false;
+    static class MyCalendar {
+        List<int[]> list;
+        public MyCalendar() {
+            list = new ArrayList<>();
         }
-        list.add(new int[]{start , end});
-        return true;
+
+        public boolean book(int start, int end) {
+            end--; // 存储的都是左右闭区间了
+            for (int[] info : list){
+                if (start > info[1] || end < info[0]) continue;
+                else return false;
+            }
+            list.add(new int[]{start , end});
+            return true;
+        }
     }
+
 }
+
+
