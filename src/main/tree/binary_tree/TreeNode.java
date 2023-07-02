@@ -86,6 +86,8 @@ public class TreeNode {
         return root;
     }
 
+
+
     public static void main(String[] args) {
         String data = "[1,2,3,null,null,4,5]";
         System.out.println(deserialize(data));

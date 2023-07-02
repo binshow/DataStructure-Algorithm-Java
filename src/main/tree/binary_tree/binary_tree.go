@@ -10,6 +10,30 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func preorderTraversal(root *TreeNode) []int {
+	res := []int{}
+	if root == nil {
+		return res
+	}
+	stack := []*TreeNode{}
+	stack = append(stack , root)
+	for len(stack) > 0 {
+		cur := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		res = append(res , cur.Val)
+		if cur.Right != nil {
+			stack = append(stack , cur.Right)
+		}
+		if cur.Left != nil {
+			stack = append(stack , cur.Left)
+		}
+	}
+
+	return res
+
+
+
+}
 
 // https://leetcode.cn/problems/find-bottom-left-tree-value/
 // 查找树的最深最左子节点
