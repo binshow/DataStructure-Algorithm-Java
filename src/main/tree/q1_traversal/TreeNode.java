@@ -15,4 +15,14 @@ public class TreeNode {
         this.val = val;
     }
 
+
+    public static TreeNode getDefault(){
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(5);
+        return root;
+    }
+
 }
