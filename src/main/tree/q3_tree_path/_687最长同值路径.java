@@ -2,6 +2,8 @@ package tree.q3_tree_path;
 
 //https://leetcode.cn/problems/longest-univalue-path/
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/longest-univalue-path/solution/by-meteordream-hdy3/
 public class _687最长同值路径 {
 

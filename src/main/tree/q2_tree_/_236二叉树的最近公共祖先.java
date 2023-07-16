@@ -1,5 +1,7 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 public class _236二叉树的最近公共祖先 {
 

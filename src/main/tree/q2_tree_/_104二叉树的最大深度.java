@@ -3,6 +3,8 @@ package tree.q2_tree_;
 
 //https://leetcode.cn/problems/maximum-depth-of-binary-tree/
 
+import tree.TreeNode;
+
 public class _104二叉树的最大深度 {
 
     public int maxDepth(TreeNode root) {

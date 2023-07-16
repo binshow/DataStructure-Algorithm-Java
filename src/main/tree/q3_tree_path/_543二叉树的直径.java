@@ -1,5 +1,7 @@
 package tree.q3_tree_path;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/diameter-of-binary-tree/
 public class _543二叉树的直径 {
 

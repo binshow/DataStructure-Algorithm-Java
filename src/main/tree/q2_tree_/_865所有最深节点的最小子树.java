@@ -1,5 +1,7 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 //https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/
 public class _865所有最深节点的最小子树 {
 

@@ -1,5 +1,7 @@
 package tree.q3_tree_path;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/sum-root-to-leaf-numbers/
 public class _129根节点到叶子节点的数字之和 {
 

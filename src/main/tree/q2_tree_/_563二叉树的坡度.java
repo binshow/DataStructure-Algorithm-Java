@@ -1,5 +1,7 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/binary-tree-tilt/
 public class _563二叉树的坡度 {
 

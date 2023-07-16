@@ -1,12 +1,15 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/binary-tree-pruning/
 public class _814二叉树剪枝 {
 
     public TreeNode pruneTree(TreeNode root) {
         if (root == null) return null;
 
-        // 为啥一定要 先删子节点，最后再删根节点
+        // 为啥一定要 先删子节点，最后再删根节点?
+        // 因为删完 子节点之后 ，root.left 和 root.right 都可能为null
         root.left = pruneTree(root.left);
         root.right = pruneTree(root.right);
 

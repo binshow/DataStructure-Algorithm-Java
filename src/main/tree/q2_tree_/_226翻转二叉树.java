@@ -1,6 +1,8 @@
 package tree.q2_tree_;
 
 
+import tree.TreeNode;
+
 //https://leetcode.cn/problems/invert-binary-tree/
 public class _226翻转二叉树 {
 

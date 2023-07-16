@@ -1,6 +1,8 @@
 package tree.q2_tree_;
 
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/symmetric-tree/
 public class _101对称二叉树 {
 

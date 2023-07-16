@@ -1,5 +1,7 @@
 package tree.q3_tree_path;
 
+import tree.TreeNode;
+
 //https://leetcode.cn/problems/path-sum/
 public class _112二叉树的路径总和 {
 

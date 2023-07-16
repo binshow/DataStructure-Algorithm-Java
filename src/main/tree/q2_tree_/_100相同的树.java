@@ -3,6 +3,8 @@ package tree.q2_tree_;
 
 //https://leetcode.cn/problems/same-tree/
 
+import tree.TreeNode;
+
 public class _100相同的树 {
 
 

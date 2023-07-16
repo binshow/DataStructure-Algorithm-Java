@@ -1,5 +1,7 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/subtree-of-another-tree/
 public class _572判断子树 {
 

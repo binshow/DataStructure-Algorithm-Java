@@ -1,4 +1,4 @@
-package tree.q2_tree_;
+package tree.q6_bfs;
 
 /**
  * @author shengbinbin

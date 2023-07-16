@@ -1,5 +1,7 @@
 package tree.q2_tree_;
 
+import tree.TreeNode;
+
 // https://leetcode.cn/problems/sum-of-left-leaves/
 public class _404左叶子之和 {
 
