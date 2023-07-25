@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class _39_40组合总和 {
+public class _39_40_216组合总和 {
 
 
     // https://leetcode.cn/problems/combination-sum/
@@ -63,6 +63,32 @@ public class _39_40组合总和 {
             if (i > start && nums[i] == nums[i-1]) continue;
             list.add(nums[i]);
             dfsV2(nums , i +1 ,  target - nums[i] , list , res);
+            list.remove(list.size()-1);
+        }
+    }
+
+
+    // https://leetcode.cn/problems/combination-sum-iii/
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (k == 0 || n == 0) return res;
+        int[] nums = {1,2,3,4,5,6,7,8,9};
+        List<Integer> list = new ArrayList<>();
+        dfs3(nums , 0 , k , n , list , res);
+        return res;
+
+    }
+
+    private void dfs3(int[] nums, int start, int k , int target, List<Integer> list, List<List<Integer>> res) {
+        if (target < 0 || list.size() > k) return;
+        if (target == 0) {
+            if (list.size() == k) res.add(new ArrayList<>(list));
+            return;
+        }
+
+        for (int i = start; i < nums.length; i++) {
+            list.add(nums[i]);
+            dfs3(nums , i + 1 , k , target - nums[i] , list , res);
             list.remove(list.size()-1);
         }
     }
