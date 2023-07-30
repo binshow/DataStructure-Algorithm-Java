@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author shengbinbin
- * @description: https://leetcode.cn/problems/implement-trieByArray-prefix-tree/
+ * @description: https://leetcode.cn/problems/implement-trieByArray-prefix-DataStructure.Tree/
  * @date 2022/7/1111:14 PM
  */
 public class implement_trie_tree {
