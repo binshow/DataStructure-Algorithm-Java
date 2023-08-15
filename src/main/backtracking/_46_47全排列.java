@@ -1,15 +1,40 @@
 package backtracking;
 
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class _46_47全排列 {
 
-    //https://leetcode.cn/problems/permutations/
+    //https://leetcode.cn/problems/permutations/      // 不含重复数字
+    //https://leetcode.cn/problems/permutations-ii/   //包含重复数字
 
-    // 不含重复数字
+
+    @Test
+    void testPermute(){
+        Assertions.assertEquals(permute(new int[]{1, 2, 3}).toString() , "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]");
+        Assertions.assertEquals(permute(new int[]{1, 0}).toString() , "[[1, 0], [0, 1]]");
+    }
+
+
+
+    @Test
+    void testPermuteUnique(){
+        Assertions.assertEquals(permuteUnique(new int[]{1,1,2}).toString() , "[[1, 1, 2], [1, 2, 1], [2, 1, 1]]");
+        Assertions.assertEquals(permuteUnique(new int[]{1,2,3}).toString() , "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]");
+    }
+
+
+
+
+
+
+
+
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         if (nums.length == 0) return res;
@@ -35,14 +60,12 @@ public class _46_47全排列 {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(permute(new int[]{1, 2, 3}));
-    }
 
 
 
-    //https://leetcode.cn/problems/permutations-ii/
-    //包含重复数字
+
+
+
 
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
