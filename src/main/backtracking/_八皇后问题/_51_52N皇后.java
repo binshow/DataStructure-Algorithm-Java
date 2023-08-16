@@ -1,4 +1,4 @@
-package backtracking;
+package backtracking._八皇后问题;
 
 import java.util.ArrayList;
 import java.util.List;

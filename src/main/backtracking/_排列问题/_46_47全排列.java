@@ -1,4 +1,4 @@
-package backtracking;
+package backtracking._排列问题;
 
 
 import org.junit.jupiter.api.Assertions;
@@ -37,7 +37,6 @@ public class _46_47全排列 {
 
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        if (nums.length == 0) return res;
         List<Integer> list = new ArrayList<>();
         boolean[] isv = new boolean[nums.length];
         dfs(nums , list , res , isv);
