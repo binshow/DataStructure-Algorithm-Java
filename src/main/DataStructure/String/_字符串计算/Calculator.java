@@ -1,7 +1,5 @@
-package stack.calculator;
+package DataStructure.String._字符串计算;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -18,15 +16,13 @@ public class Calculator {
         String s2 = "5 + 12 * 2 - 8 / 4";
         System.out.println(calculator2(s2));
 
-        Map<Integer , Integer> map = new HashMap<>();
 
-        String s3 = "(5 + 12) * 2 - 8 / (4 + 4)";
-        System.out.println(calculator3(s3));
     }
 
 
-    // 1. 只包含 + / -
+    // ============ 1. 只包含加减符号 ============
     // 5 + 12 - 7
+    // 可以拆成 +5 , + 12 , -7 塞入栈中相加
     static int calculator1(String s){
         Stack<Integer> stack = new Stack<>();
         char operator = '+';
@@ -83,16 +79,16 @@ public class Calculator {
 
 
     // 3. 包含 + / - / * / \ / ()
-    static int i = 0;
-    static int calculator3(String s){
+    int index = 0;
+    int calculator3(String s){
         Stack<Integer> stack = new Stack<>();
         char operator = '+';
         int num = 0;
-        while (i < s.length()){
-            char c = s.charAt(i++);
+        while (index < s.length()){
+            char c = s.charAt(index++);
             if (c >= '0' && c <= '9') num = num * 10 + c - '0';
             if (c == '(') num = calculator3(s);
-            if (i == s.length() || c == '+' || c == '-' || c == '*' || c == '/' || c == ')'){
+            if (index == s.length() || c == '+' || c == '-' || c == '*' || c == '/' || c == ')'){
                 if (operator == '+') stack.push(num);
                 else if (operator == '-') stack.push(-num);
                 else if (operator == '*') stack.push(stack.pop() * num);

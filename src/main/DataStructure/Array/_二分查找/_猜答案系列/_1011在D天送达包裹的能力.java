@@ -1,4 +1,4 @@
-package DataStructure.Array._二分查找;
+package DataStructure.Array._二分查找._猜答案系列;
 
 // https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/
 public class _1011在D天送达包裹的能力 {

@@ -1,4 +1,5 @@
-package node_list;
+package DataStructure.List;
+
 
 /**
  * @author shengbinbin

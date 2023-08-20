@@ -1,6 +1,5 @@
 package design;
 
-import node_list.ListNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
