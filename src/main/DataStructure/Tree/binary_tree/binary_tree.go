@@ -15,17 +15,17 @@ func preorderTraversal(root *TreeNode) []int {
 	if root == nil {
 		return res
 	}
-	stack := []*TreeNode{}
-	stack = append(stack , root)
-	for len(stack) > 0 {
-		cur := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
+	DataStructure.stack := []*TreeNode{}
+	DataStructure.stack = append(DataStructure.stack , root)
+	for len(DataStructure.stack) > 0 {
+		cur := DataStructure.stack[len(DataStructure.stack)-1]
+		DataStructure.stack = DataStructure.stack[:len(DataStructure.stack)-1]
 		res = append(res , cur.Val)
 		if cur.Right != nil {
-			stack = append(stack , cur.Right)
+			DataStructure.stack = append(DataStructure.stack , cur.Right)
 		}
 		if cur.Left != nil {
-			stack = append(stack , cur.Left)
+			DataStructure.stack = append(DataStructure.stack , cur.Left)
 		}
 	}
 

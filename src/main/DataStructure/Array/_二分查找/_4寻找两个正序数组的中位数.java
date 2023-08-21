@@ -15,23 +15,23 @@ public class _4寻找两个正序数组的中位数 {
 
         int l1 = nums1.length;
         int l2 = nums2.length;
-        int a = findKth(nums1 , 0 , nums1.length-1 , nums2 , 0 , nums2.length-1 , (l1 + l2 + 1) /2 );
-        int b = findKth(nums1 , 0 , nums1.length-1 , nums2 , 0 , nums2.length-1 , (l1 + l2 + 2) /2 );
+        int a = findK(nums1 , 0 , nums1.length-1 , nums2 , 0 , nums2.length-1 , (l1 + l2 + 1) /2 );
+        int b = findK(nums1 , 0 , nums1.length-1 , nums2 , 0 , nums2.length-1 , (l1 + l2 + 2) /2 );
         return (a + b) / 2.0;
     }
 
-    private static int findKth(int[] nums1, int l1, int r1, int[] nums2, int l2, int r2, int k) {
+    private static int findK(int[] num1, int l1, int r1, int[] num2, int l2, int r2, int k) {
         int len1 = r1 - l1 + 1;
         int len2 = r2 - l2 + 1;
-        if (len1 == 0) return nums2[l2 + k - 1];
-        if (len2 == 0) return nums1[l1 + k - 1];
-        if (k == 1) return Math.min(nums1[l1] , nums2[l2]);
+        if (len1 == 0) return num2[l2 + k - 1];
+        if (len2 == 0) return num1[l1 + k - 1];
+        if (k == 1) return Math.min(num1[l1] , num2[l2]);
 
         int i = l1 + Math.min(k / 2 , len1) - 1;
         int j = l2 + Math.min(k / 2 , len2) - 1;
        // System.out.println("i" + i + " , j = " + j + "k =" + k + "l2 = " + l2);
-        if(nums1[i] > nums2[j]) return findKth(nums1 , l1 , r1 , nums2 , j+1 , r2 , k - (j-l2+1));
-        else return findKth(nums1 , i+1 , r1 , nums2 , l2 , r2 , k - (i-l1+1));
+        if(num1[i] > num2[j]) return findK(num1 , l1 , r1 , num2 , j+1 , r2 , k - (j-l2+1));
+        else return findK(num1 , i+1 , r1 , num2 , l2 , r2 , k - (i-l1+1));
     }
 
 }

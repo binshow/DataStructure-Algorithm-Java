@@ -20,7 +20,7 @@ public class Longest_Increasing_Subsequence {
         int n = nums.length;
         int res = 1;
 
-        // dp[i] 表示以 nums[i]结尾的最长上升子序列
+        // Algorithm.dp[i] 表示以 nums[i]结尾的最长上升子序列
         int[] dp = new int[n];
         dp[0] = 1;
 
@@ -29,7 +29,7 @@ public class Longest_Increasing_Subsequence {
             for (int j = i-1; j >= 0 ; j--) {
                 if (nums[i] > nums[j]) {
                     dp[i] = Math.max(dp[i] , dp[j]+1);
-                    res = Math.max(dp[i] , res); // dp 数组中的最大值就是 结果
+                    res = Math.max(dp[i] , res); // Algorithm.dp 数组中的最大值就是 结果
                 }
             }
         }

@@ -26,7 +26,7 @@ public class _931下降路径最小和 {
             }
         }
 
-        //for(int[] nums : dp) System.out.println(Arrays.toString(nums));
+        //for(int[] nums : Algorithm.dp) System.out.println(Arrays.toString(nums));
 
         int res = Integer.MAX_VALUE;
         for(int i = 0 ; i < n ; i++) res= Math.min(res , dp[m-1][i]);

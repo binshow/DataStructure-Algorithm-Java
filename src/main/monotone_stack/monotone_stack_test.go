@@ -47,22 +47,22 @@ func trap2(height []int) int {
 	if n < 2 {
 		return 0
 	}
-	stack := []int{}
+	DataStructure.stack := []int{}
 	res := 0
 	for i := 0; i < n; i++ {
 		// i 是 右墙
 		// 第一次弹出的是 底部bottom
 		// 第二次弹出的是 左墙
-		for len(stack) > 0 && height[i] > height[stack[len(stack)-1]] {
-			bottom := stack[len(stack)-1]
-			stack = stack[0:len(stack)-1]
-			if len(stack) <= 0 {
+		for len(DataStructure.stack) > 0 && height[i] > height[DataStructure.stack[len(DataStructure.stack)-1]] {
+			bottom := DataStructure.stack[len(DataStructure.stack)-1]
+			DataStructure.stack = DataStructure.stack[0:len(DataStructure.stack)-1]
+			if len(DataStructure.stack) <= 0 {
 				break
 			}
-			l := stack[len(stack)-1] // 左墙
+			l := DataStructure.stack[len(DataStructure.stack)-1] // 左墙
 			res += (i - l - 1) * (minInt(height[l] , height[i]) - height[bottom])
 		}
-		stack = append(stack,i)
+		DataStructure.stack = append(DataStructure.stack,i)
 	}
 	return res
 }

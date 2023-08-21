@@ -11,10 +11,10 @@ public class Longest_Increasing_Subsequence {
 
     // 找到数组中的最长递增子序列
 
-    // 解法1：普通 dp，时间复杂度 n2
+    // 解法1：普通 Algorithm.dp，时间复杂度 n2
     public int lengthOfLIS(int[] nums) {
         int n = nums.length;
-        // dp[i] 表示 以nums[i] 结尾的数组的最长递增子序列长度
+        // Algorithm.dp[i] 表示 以nums[i] 结尾的数组的最长递增子序列长度
         int[] dp = new int[n];
         Arrays.fill(dp , 1);
 
@@ -35,11 +35,11 @@ public class Longest_Increasing_Subsequence {
     // 再遍历到2成为129，然后是123直到12345
     public int lengthOfLIS2(int[] nums) {
         int n = nums.length;
-        // dp[i] 保存的是每个子序列的最后一个数
+        // Algorithm.dp[i] 保存的是每个子序列的最后一个数
         int[] dp = new int[n];
         int res = 0;
         for (int num : nums){
-            // 找出当前数应该在 dp 中插入的位置，dp本身肯定是一个递增的数组
+            // 找出当前数应该在 Algorithm.dp 中插入的位置，dp本身肯定是一个递增的数组
             int l = 0 , r = res;
             while (l < r) {
                 int mid = l + r >> 1;

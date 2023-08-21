@@ -15,7 +15,7 @@ public class _300最长递增子序列 {
                 if (nums[i] > nums[j]) dp[i] = Math.max(dp[j]+1 , dp[i]);
             }
         }
-        //System.out.println(Arrays.toString(dp));
+        //System.out.println(Arrays.toString(Algorithm.dp));
 
         int res = dp[0];
         for(int num : dp) res = Math.max(res , num);

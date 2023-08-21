@@ -10,7 +10,7 @@ public class _718最长重复子数组 {
         int l1 = nums1.length;
         int l2 = nums2.length;
         if(l1 == 0 || l2 == 0) return 0;
-        //dp[i][j] 表示以A[i] 和 B[j] 结尾时的最长公共子数组
+        //Algorithm.dp[i][j] 表示以A[i] 和 B[j] 结尾时的最长公共子数组
         int[][] dp = new int[l1+1][l2+1];
         int res = 0;
         for(int i = 1 ; i <= l1 ; i++){
@@ -22,7 +22,7 @@ public class _718最长重复子数组 {
             }
         }
 
-        // for(int[] tem : dp) System.out.println(Arrays.toString(tem));
+        // for(int[] tem : Algorithm.dp) System.out.println(Arrays.toString(tem));
 
         return res;
 

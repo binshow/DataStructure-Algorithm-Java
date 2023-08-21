@@ -17,9 +17,9 @@ public class LargeSumOfAverages {
     //我们也可以把 nums 分成[9, 1], [2], [3, 9].
     //这样的分组得到的分数为 5 + 2 + 6 = 13, 但不是最大值.
     public double largestSumOfAverages(int[] nums, int K) {
-        // dp[i][K]: 将nums中的前i个数分成k个子数组的最大平均值和
-        // K = 1 , dp[i][1] = (nums[0] + nums[1] +... + nums[i-1]) / i;
-        // K > 1 , dp[i][K] = max(dp[j][K-1] + arg[j][i])
+        // Algorithm.dp[i][K]: 将nums中的前i个数分成k个子数组的最大平均值和
+        // K = 1 , Algorithm.dp[i][1] = (nums[0] + nums[1] +... + nums[i-1]) / i;
+        // K > 1 , Algorithm.dp[i][K] = max(Algorithm.dp[j][K-1] + arg[j][i])
         // 其中j是[0,i-1]之间， avg[j][i] 是区间 [j ,i-1] 的平均值
         // avg[j][i] = (nums[j] + ... + nums[i-1]) / (i-j); 这一步可以使用前缀和来优化
 
@@ -27,7 +27,7 @@ public class LargeSumOfAverages {
         double[] sum = new double[n+1];
         for(int i = 1;  i <= n ; i++) sum[i] = sum[i-1] + nums[i-1];
 
-        // dp[i][K] : 将nums中的前i个数分成k个子数组的最大平均值总和
+        // Algorithm.dp[i][K] : 将nums中的前i个数分成k个子数组的最大平均值总和
         double[][] dp = new double[n+1][K+1];
 
         // base case: K=1 只能分一组

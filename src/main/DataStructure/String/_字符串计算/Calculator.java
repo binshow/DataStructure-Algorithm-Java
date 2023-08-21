@@ -44,7 +44,7 @@ public class Calculator {
             }
         }
 
-       // for (int tem : stack) System.out.println(tem);
+       // for (int tem : DataStructure.stack) System.out.println(tem);
 
         // 将栈中的数字加起来
         int res = 0;
