@@ -13,6 +13,7 @@ public class _31下一个排列 {
 
         if (nums.length == 0) return;
         int n = nums.length;
+        // i 在前，j 在后，且都是从 n-1 开始往前遍历
         for (int i = n-2; i >= 0; i--) {
             for (int j = n-1; j > i; j--) {
                 if (nums[i] < nums[j]){
