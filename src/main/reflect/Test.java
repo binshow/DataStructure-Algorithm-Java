@@ -1,7 +1,5 @@
 package reflect;
 
-import com.sun.org.apache.xml.internal.security.utils.ClassLoaderUtils;
-
 import java.lang.reflect.Proxy;
 
 /**
