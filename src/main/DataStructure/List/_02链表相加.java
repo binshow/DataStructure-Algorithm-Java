@@ -1,6 +1,20 @@
 package DataStructure.List;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class _02链表相加 {
+
+
+    @Test
+    void test(){
+
+        Assertions.assertEquals(
+                addTwoNumbers(ListNode.buildList(new int[]{1,2,3}),
+                               ListNode.buildList(new int[]{4,5,6})).toString(),
+                ListNode.buildList(new int[]{5,7,9}));
+
+    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
