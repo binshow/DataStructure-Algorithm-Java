@@ -1,4 +1,4 @@
-package monotone_stack;
+package DataStructure.stack.monotone_stack;
 
 import java.util.Arrays;
 import java.util.Stack;

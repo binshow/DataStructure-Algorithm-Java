@@ -1,4 +1,4 @@
-package monotone_stack;
+package DataStructure.stack.monotone_stack;
 
 public class _84柱状图中最大的矩形 {
 
