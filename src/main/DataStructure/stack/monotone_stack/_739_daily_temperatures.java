@@ -3,12 +3,7 @@ package DataStructure.stack.monotone_stack;
 import java.util.Arrays;
 import java.util.Stack;
 
-/**
- * @author shengbinbin
- * @description: https://leetcode.cn/problems/daily-temperatures/
- * @date 2023/6/269:52 AM
- */
-public class _739每日温度 {
+public class _739_daily_temperatures {
 
     public static void main(String[] args) {
         int[] res = dailyTemperatures(new int[]{73, 74, 75, 71, 69, 72, 76, 73});
@@ -32,5 +27,4 @@ public class _739每日温度 {
         }
         return res;
     }
-
 }
