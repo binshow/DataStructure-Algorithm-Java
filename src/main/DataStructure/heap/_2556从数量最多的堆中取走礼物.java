@@ -1,4 +1,4 @@
-package DataStructure.Heap;
+package DataStructure.heap;
 
 //https://leetcode.cn/problems/take-gifts-from-the-richest-pile/description/?envType=daily-question&envId=Invalid%20Date
 public class _2556从数量最多的堆中取走礼物 {

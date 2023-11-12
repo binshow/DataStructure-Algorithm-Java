@@ -1,4 +1,4 @@
-package slide_windows.variable_length;
+package Algorithm.slide_windows.variable_length;
 
 import java.util.Arrays;
 import java.util.HashMap;

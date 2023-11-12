@@ -1,4 +1,4 @@
-package slide_windows.fix_length;
+package Algorithm.slide_windows.fix_length;
 
 import java.util.*;
 

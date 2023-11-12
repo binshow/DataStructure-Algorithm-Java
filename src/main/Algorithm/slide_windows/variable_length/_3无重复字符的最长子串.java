@@ -1,4 +1,4 @@
-package slide_windows.variable_length;
+package Algorithm.slide_windows.variable_length;
 
 
 // https://leetcode.cn/problems/longest-substring-without-repeating-characters/
