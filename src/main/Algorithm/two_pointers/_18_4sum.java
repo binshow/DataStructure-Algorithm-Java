@@ -19,7 +19,7 @@ public class _18_4sum {
                 int L = i+1;
                 int R = j-1;
                 while (L < R){
-                    int sum = nums[i] + nums[L] + nums[R] + nums[j];
+                    long sum = nums[i] + nums[L] + nums[R] + nums[j];
                     if (sum == target){
                         res.add(Arrays.asList(nums[i] , nums[L] , nums[R] , nums[j]));
                         while (L < R && nums[L] == nums[L+1]) L++;
