@@ -79,6 +79,7 @@ public class _46_47全排列 {
     private void dfsV2(int[] nums, List<Integer> list, List<List<Integer>> res, boolean[] isv) {
         if (list.size() == nums.length){
             res.add(new ArrayList<>(list));
+
             return;
         }
 

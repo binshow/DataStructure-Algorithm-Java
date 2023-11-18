@@ -12,6 +12,9 @@ public class _排序算法 {
         quickSort(nums , mid + 1 , r);
     }
 
+    // 5 2 4 1 3
+
+    // 4 2 5 1 3
     static int partition(int[] nums , int left , int right){
         int base = nums[right];
         int l = left , r = right-1;
@@ -21,6 +24,7 @@ public class _排序算法 {
             else swap(nums , l++ , r--);
         }
         swap(nums , l , right);
+        System.out.println("partition arr: " + Arrays.toString(nums) + " l: " + l);
         return l;
     }
 
@@ -30,10 +34,11 @@ public class _排序算法 {
         nums[r] = tem;
     }
 
+
     public static void main(String[] args) {
-        int[] nums = {5,1,1,2,0,0};
-        //quickSort(nums , 0 , nums.length-1);
-        mergeSort(nums , 0 , nums.length-1);
+        int[] nums = {5,2,4,1,3};
+        quickSort(nums , 0 , nums.length-1);
+        //mergeSort(nums , 0 , nums.length-1);
         System.out.println(Arrays.toString(nums));
 
     }
