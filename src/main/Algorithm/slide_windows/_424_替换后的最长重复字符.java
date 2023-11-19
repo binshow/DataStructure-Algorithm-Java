@@ -35,7 +35,12 @@ public class _424_替换后的最长重复字符 {
     *
     *       对于合法的子串而言，必然有 sum(所有字符的出现次数) - max(出现次数最多的字符的出现次数）= other(其他字符的出现次数) <= k
     *
+    *       // https://leetcode.cn/problems/max-consecutive-ones-iii/solutions/36112/hua-dong-chuang-kou-de-chang-gui-jie-fa-by-xiaonen/
     *       窗口的大小与新字符的最大计数之间的差值表示可以替换的字符个数，当可以替换的字符个数大于 k 时，我们需要缩小窗口，也就是 left 右移，直到可以替换的字符个数等于 k 时，我们可以得到结果 !!!
+    *
+    *       类似题：https://leetcode.cn/problems/max-consecutive-ones-iii/description/
+    *               https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/solutions/587747/chua-dong-chuang-kou-lao-ti-by-xiaoneng-jewb/
+    *               https://leetcode.cn/problems/get-equal-substrings-within-budget/solutions/37868/chua-dong-chuang-kou-qing-xi-yi-dong-by-xiaoneng/
     * */
 
     public int characterReplacement(String s, int k) {
