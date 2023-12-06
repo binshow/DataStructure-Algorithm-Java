@@ -39,6 +39,10 @@ public class Skiplist {
     }
 
     // 从上往下找到每层的前置节点，再遍历每一层插入新节点
+    //  o
+    //  o
+    //  o    19
+    //  o    19  ----> 22
     public void add(int num){
         // updates 数组存储每层应该插入的节点是啥
         Node[] updates = new Node[DEFAULT_MAX_LEVEL];
@@ -104,7 +108,7 @@ public class Skiplist {
         return true;
     }
 
-    //遍历跳表
+    //遍历跳表,打印每一层
     public void printList(){
         for (int i = curLevel - 1; i >= 0 ; i--) {
             Node curNode = this.head.next[i];

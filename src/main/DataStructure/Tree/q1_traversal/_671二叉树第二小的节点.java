@@ -1,6 +1,8 @@
 package DataStructure.Tree.q1_traversal;
 
 
+import DataStructure.Tree.TreeNode;
+
 // https://leetcode.cn/problems/second-minimum-node-in-a-binary-tree/
 public class _671二叉树第二小的节点 {
 

@@ -24,23 +24,33 @@ public class _725分隔链表 {
 
         //3. 前面 mod 个 划分 size + 1 个 ，后面 就划分 size 个一组
         cur = head;
-        int index = 0;
-        for (int i = 0; i < k; i++) {
-            res[index++] = cur;
-            int num = mod > 0 ? size + 1 : size;
-            mod--;
-
-            while (num > 1){
+        for(int i = 0 ; i < mod ; i++){
+            res[i] = cur;
+            int tmp = size + 1;
+            while(tmp > 1) {  // cur 已经算一个，所以  > 1
                 cur = cur.next;
-                num--;
+                tmp--;
             }
 
-            if(cur == null) return res;
-
-            ListNode temp = cur.next;
+            ListNode node = cur.next;
             cur.next = null;
-            cur = temp;
+            cur = node;
         }
+
+        // 剩余的 n 长度
+        for(int i = mod ; i < k ; i++){
+            res[i] = cur;
+            int tmp = size;
+            while(tmp > 1) {
+                cur = cur.next;
+                tmp--;
+            }
+
+            ListNode node = cur.next;
+            cur.next = null;
+            cur = node;
+        }
+
         return res;
 
     }
