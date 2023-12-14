@@ -3,11 +3,7 @@ package Algorithm.binarySearch;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-public class _209MinSubArrayLen {
+public class _209_长度最小的子数组 {
 
 
     @Test
@@ -65,20 +61,23 @@ public class _209MinSubArrayLen {
 
 
     // 解法2：因为全是正整数，所以可以直接用 滑动窗口
-    public int minSubArrayLenV2(int target, int[] nums){
-         int l = 0 , r = 0;
-         int sum = 0;
-         int res = nums.length + 1;
-         while (r < nums.length){
-             sum += nums[r];
-             while (sum >= target){
-                 res = Math.min(res , r - l + 1);
-                 sum -= nums[l++]; // 左指针移动
-             }
-             r++;
-         }
-         return res  == nums.length+1 ? 0 : res;
+    // 全是正数 ，窗口内 具有递增性质 ---> 滑动窗口
+    public int minSubArrayLenV2(int target, int[] nums) {
+        int l = 0 , r = 0;
+        int sum = 0;
+        int res = Integer.MAX_VALUE;
 
+        while(r < nums.length){
+            sum += nums[r];
+
+            while(sum >= target){
+                res = Math.min(res , r - l + 1); // 求最小值，左指针移动时 更新res
+                sum -= nums[l++];
+            }
+            r++;
+        }
+
+        return res == Integer.MAX_VALUE ? 0 : res;
     }
 
 

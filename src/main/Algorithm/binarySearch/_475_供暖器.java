@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 // https://leetcode.cn/problems/heaters/
 
-public class _475供暖器 {
+public class _475_供暖器 {
 
     public int findRadius(int[] houses, int[] heaters) {
         Arrays.sort(heaters);

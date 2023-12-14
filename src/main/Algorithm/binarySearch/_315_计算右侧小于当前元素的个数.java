@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-public class _315CountOfSmallerNumAfterSelf {
+public class _315_计算右侧小于当前元素的个数 {
 
 
     // Given an integer array nums,
@@ -50,9 +50,10 @@ public class _315CountOfSmallerNumAfterSelf {
            // list.add(nums[i]);
           //  System.out.println("cur list = " + list + "nums[i] " + nums[i] + " 存放的位置是 " + index);
            // list.add(nums[i]);
-            list.add(index , nums[i]);
+            list.add(index , nums[i]); // 注意维护 list 的有序性
             res.add(index);
         }
+
        // System.out.println(list);
         Collections.reverse(res);
         return res;

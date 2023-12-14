@@ -2,9 +2,15 @@ package Algorithm.binarySearch;
 
 import java.util.Arrays;
 
-public class _300LongesrIncreasingSubsequence {
+public class _300_最长递增子序列 {
 
 
+
+    //https://leetcode.cn/problems/longest-increasing-subsequence/description/
+
+
+
+    // https://leetcode.cn/problems/longest-increasing-subsequence/solutions/24173/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/
 
 
     // 最长递增子序列长度
